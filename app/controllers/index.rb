@@ -59,7 +59,7 @@ post '/urls' do
   	erb :error
   else
 	  @new_url.short_url
-	  erb :index
+	  # erb :index
 	end
 end
 

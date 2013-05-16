@@ -2,10 +2,10 @@
 <div class="container-fluid">
   <div class="row-fluid">
     
-    <div class="span6">
+    <div id="enter_url" class="span6">
       <div class="hero-unit">
-        <h2>Shortened Yer URL Here</h2>
-        <form method="post" action="/urls">
+        <h2>Shorten Yer URL Here</h2>
+        <form id="enter_form" method="post" action="/urls">
           <input type="text" name="original_url" value="http://">
           <input type="submit" value="Shorten it!">
         </form>
@@ -25,7 +25,7 @@
     </div>  
   </div>
   <div class="row-fluid">
-    <div class="span6">
+    <div id="return_url" class="span6">
         <% if @new_url %>
           <div class="hero-unit">
             <h2>Your Link!</h2>

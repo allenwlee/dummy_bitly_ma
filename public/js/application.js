@@ -1,7 +1,26 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $("#enter_url").on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: '/urls',
+      data: $('#enter_form').serialize()
+    }).done( function(data){
+      $('#enter_form').fadeOut(500);
+      $('#enter_form').parent().append("<a href='/" + data + "'>" + data + "</a>");
+      $('h2').text("Your New URL!");
+    });    
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $("#login").on('click', function(e){
+    e.preventDefault();
+  });    
+    
+
+
+
+
+
+
 });
+
