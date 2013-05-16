@@ -1,7 +1,10 @@
-<div>
-	<a href='/'>Home</a>
-	<a href="/profile/<%=session[:user_id]%>">Profile</a>
-	<a href='/login'>Login</a>
-	<a href='/logout'>Logout</a>
-
+<div class="navbar">
+	<div class="navbar-inner">	
+		<ul class="nav">
+		  <li><a href='/'>Home</a></li>
+			<li><a href="/profile/<%=session[:user_id]%>">Profile</a></li>
+			<li><a href='/login'>Login</a></li>
+			<li><a href='/logout'>Logout</a></li>
+		</ul>
+	</div>
 </div>
