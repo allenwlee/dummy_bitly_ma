@@ -1,5 +1,18 @@
 
+
 <div class="container">
+  <form method="post" action="/urls">
+    <input type="text" name="original_url">
+    <input type="submit" value="Get short version">
+  </form>
+</div>
+<div class="container">
+<% if @new_url %>
+  <a id="shorty" href="<%= @new_url.short_url %>"><%= @new_url.short_url %></a>
+  <% end %>
+</div>
+<div class="container">
+	If you would like to save your shortened urls, please create an account
   <form method="post" action="/create">
     <input type="text" name="name" placeholder="your name">
     <input type="text" name="email" placeholder="your email">
